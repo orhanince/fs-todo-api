@@ -1,4 +1,15 @@
 // Get App
 GET localhost:8080
 
+// AUTH
+### Register
+POST localhost:8080/auth/register
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "123456"
+}
+
 

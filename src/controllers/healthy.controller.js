@@ -36,7 +36,7 @@ router.get('/', async (req, res, next) => {
 /**
  * GET /healthy
  * @summary Healthy checking endpoint
- * @tags healthy
+ * @tags Healthy
  * @return {Healthy} 200 - success response - application/json
  */
 router.get('/healthy', async (req, res, next) => {
