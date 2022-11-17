@@ -35,6 +35,11 @@ Content-Type: application/json
   "title": "Test todo second."
 }
 
+### Mark Todo Completed
+PUT localhost:8080/todo/markTodoCompleted/85e60261-b74b-4ca8-b151-94097aae57fe
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiN2IwZjg5YTgtNDEzZS00YjQzLThiYjgtYTZhMDMzNjEyNzZjIiwiaWF0IjoxNjY4Njg2Nzg0LCJleHAiOjE2Njg2ODg1ODQsImlzcyI6ImZzX2NoYWxsZW5nZV9hcGkifQ.Ya5c2p_jZqhCFfHkl-nlBtv_U81iSlgm_4PUMCiA4jA
+
+
 
 
 

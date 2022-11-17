@@ -1,5 +1,5 @@
 {
-  "name": "fs-challenge-api",
+  "name": "fs-todo-api",
   "version": "1.0.0",
   "description": "FoodStyles challenge api.",
   "main": "src/index.js",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/orhanince/fs-challenge-api"
+    "url": "git+ssh://git@github.com/orhanince/fs-todo-api"
   },
   "keywords": [
     "catalog",
@@ -32,9 +32,9 @@
   "author": "Orhan İnce",
   "license": "GPl-3.0",
   "bugs": {
-    "url": "https://github.com/orhanince/fs-challenge-api/issues"
+    "url": "https://github.com/orhanince/fs-todo-api/issues"
   },
-  "homepage": "https://github.com/orhanince/fs-challenge-api#readme",
+  "homepage": "https://github.com/orhanince/fs-todo-api#readme",
   "dependencies": {
     "@sentry/node": "^6.17.6",
     "@sentry/tracing": "^6.17.6",
