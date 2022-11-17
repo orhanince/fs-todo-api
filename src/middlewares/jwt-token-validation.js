@@ -5,7 +5,7 @@ module.exports = (req, res, next) => {
   const {
     headers: { authorization },
   } = req;
-  console.log('req.headers', req.headers);
+
   if (!authorization) {
     const error = new GenericError(
       400,
@@ -16,7 +16,6 @@ module.exports = (req, res, next) => {
   }
   // Disable for testing!
   const bearerToken = authorization && authorization.split(' ')[1];
-
   if (!bearerToken) {
     const error = new GenericError(
       400,
