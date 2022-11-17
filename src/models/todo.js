@@ -21,7 +21,7 @@ const Todo = sequelize.define(
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
     },
-    todo: {
+    title: {
       allowNull: false,
       type: DataTypes.STRING,
     },

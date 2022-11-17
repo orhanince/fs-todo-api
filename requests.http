@@ -1,8 +1,8 @@
-// Get App
+### Get app
 GET localhost:8080
 
-// AUTH
-### Register
+### AUTH ###
+### Sign Up
 POST localhost:8080/auth/register
 Content-Type: application/json
 
@@ -11,5 +11,31 @@ Content-Type: application/json
   "email": "test@example.com",
   "password": "123456"
 }
+
+### Login
+POST localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "123456"
+}
+
+### TODO ###
+### List todos
+GET localhost/todo/listTodos
+
+
+### Create Todo
+POST localhost:8080/todo/createTodo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMDE2YjIwMWMtZmIxZS00MDFmLWFhMjMtZmNhNjk4Nzc1MTFhIiwiaWF0IjoxNjY4NjgyMDcwLCJleHAiOjE2Njg2ODM4NzAsImlzcyI6ImZzX2NoYWxsZW5nZV9hcGkifQ.uxQz8ss9z4n380gpNasFQEDl00iQ-r3mLEUxXJUJAqg
+Content-Type: application/json
+
+{
+  "title": "Test todo second."
+}
+
+
+
 
 

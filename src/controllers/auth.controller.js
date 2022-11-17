@@ -15,7 +15,6 @@ const auth = require('../middlewares/auth');
  * @typedef {object} LoginResponse
  * @property {string} status - true
  * @property {string} token - Request token
- * @property {string} validation_code_id - validation code uuid or TEST_CUSTOMER_VALIDATION_CODE
  */
 
 /**
@@ -70,7 +69,7 @@ router.post(
  * @return {JwtResponse|RegisterResponse} 200 - success response - application/json
  */
 router.post(
-  '/register',
+  '/signUp',
   validatorMiddleware(
     body('email').isString().isLength({ min: 5, max: 100 }),
     body('password').isString().isLength({ min: 6, max: 100 })
