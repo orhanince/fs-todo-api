@@ -11,6 +11,7 @@ async function listTodos({ pagination, AUTH }) {
     pagination,
     likeColumns: ['uuid:todo_id', 'uuid:user_id'],
     user_id: AUTH.user_id,
+    status: 1,
   });
 
   const count = await Todo.count({

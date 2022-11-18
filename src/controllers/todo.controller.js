@@ -96,7 +96,6 @@ router.put(
   validatorMiddleware(param('todo_id').isUUID('4')),
   async (req, res, next) => {
     try {
-      console.log('req', req.params);
       const result = await todoService.markTodoCompleted(req);
       res.status(200).json(result);
     } catch (e) {
