@@ -62,8 +62,8 @@ router.post(
  */
 
 /**
- * POST /auth/register
- * @summary Register
+ * POST /auth/signUp
+ * @summary Sign up
  * @tags Auth
  * @param {RegisterBody} request.body.required - Create register body
  * @return {JwtResponse|RegisterResponse} 200 - success response - application/json
@@ -71,12 +71,13 @@ router.post(
 router.post(
   '/signUp',
   validatorMiddleware(
+    body('name').isString().isLength({ min: 5, max: 100 }),
     body('email').isString().isLength({ min: 5, max: 100 }),
     body('password').isString().isLength({ min: 6, max: 100 })
   ),
   async (req, res, next) => {
     try {
-      const result = await authService.register(req);
+      const result = await authService.signUp(req);
       res.status(200).json(result);
     } catch (e) {
       // this line is require for global error handling.

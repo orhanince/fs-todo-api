@@ -6,7 +6,7 @@ const userService = require('./user.service');
 /**
  * Register
  */
-async function register(req) {
+async function signUp(req) {
   const { name, email, password } = req.body || {};
   if (_.isEmpty(name) || _.isEmpty(email) || _.isEmpty(password)) {
     throw new GenericError(
@@ -34,7 +34,7 @@ async function register(req) {
 }
 
 /**
- * Login
+ * Index
  * @param {object} req
  * @returns {Promise<{status: boolean, token: (*)}>}
  */
@@ -74,7 +74,7 @@ async function logout(req) {
 }
 
 module.exports = {
-  register,
+  signUp,
   login,
   logout,
 };

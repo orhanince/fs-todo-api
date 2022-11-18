@@ -84,14 +84,15 @@ async function createUser({ name, surname, email, password }) {
  */
 async function getUser({ user_id, email }) {
   const filter = {
-    status: true,
-    deleted_at: null,
+    where: {
+      status: true,
+      deleted_at: null,
+    },
   };
-
   if (!_.isEmpty(user_id)) {
-    filter.user_id = user_id;
+    filter.where.user_id = user_id;
   } else if (!_.isEmpty(email)) {
-    filter.email = email;
+    filter.where.email = email;
   }
   return User.findOne(filter);
 }
