@@ -8,14 +8,16 @@ const GenericError = require('../utils/generic-error');
  */
 async function listTodos({ pagination, AUTH }) {
   const options = paginationOptionGenerator({
+    where: {
+      user_id: AUTH.user_id,
+      status: true,
+    },
     pagination,
     likeColumns: ['uuid:todo_id', 'uuid:user_id'],
-    user_id: AUTH.user_id,
-    status: 1,
   });
 
   const count = await Todo.count({
-    where: options.where,
+    ...options,
   });
 
   const data = await Todo.findAll({
